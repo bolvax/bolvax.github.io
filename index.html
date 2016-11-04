@@ -1,66 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content=" Udacity student page">
-    <meta name="author" content=" Bolshelapov Ivan ">
-    <meta http-equiv="last-modified" content="Sun, 10 Feb 2013 14:00:46 GMT " />
-<meta http-equiv="cache-control" content="Private" />
-<meta http-equiv="Expires" content="600" />
-    <title>Cameron Pittman: Portfolio</title>
-    <style>
-      html{font-size:100%;overflow-y:scroll;-webkit-tap-highlight-color:rgba(0,0,0,0);-ms-text-size-adjust:100%;-webkit-text-size-adjust:none}body{margin:0;font-size:14px;line-height:1.61;font-weight:400}body,button,input,select,textarea{font-family:'Open Sans',sans-serif;color:#333}a{color:#12C}a:visited{color:#61C}a:focus{outline:thin dotted}a:hover,a:active{color:#c00;outline:0}b,strong{font-weight:700}pre,code{font-family:monospace,monospace;font-size:1em}ul,ol{margin:1em 0;padding:0 0 0 20px}img{border:0;max-width:100%}body{background:#fff}header,footer,.container{max-width:45em;margin:0 auto}header{padding:0 .5em;color:#C90B0B}header img{border-radius:40px;float:left}header p{font-size:1.5em;font-weight:700;padding-left:4em}header p span{font-size:.8em;font-weight:400}.hero{padding:2em;background-color:#f8f8f8;font-size:1.2em;border-bottom:1px solid #ccc;border-top:1px solid #ccc}.content{padding:1em}.content li{list-style-type:none;font-size:1.1em}li img{float:left;padding-right:1em}li p{font-size:.9em;font-style:italic}footer{padding:0 .5em;border-top:1px solid #ccc}footer span{float:right;font-style:italic}@media only screen and (max-width: 480px){body{font-size:12px}header p{padding-left:4.5em}}
-    </style>
-  </head>
-  <body>
-    <header>
-      <a href="/"><img src="img/bolvax.jpg"></a>
-      <p>Bolshelapov Ivan Victorovich<br>(Большелапов Иван Викторович)<br><span>Email : bolvax@mail.ru or bolvax1@gmail.com</span><br><span>Phone number (Vel): +375291328200</span></p>
-
-      <a href="/"><img src="img/profilepic.jpg"></a>
-      <p>Cameron Pittman<br><span>Course Developer</span></p>
-    </header>
-
-    <div class="container">
-      <div class="hero">
-        <strong>I love web development!</strong> This is a template for a simple portfolio. I decided to use it to showcase a few Udacity courses I've taken and some teaching work, but you can use it to showcase any kind of project that you want the world to see :) <br> Contact me: me@email.com
-      </div>
-
-      <div class="content">
-        <ul>
-          <li>
-            <img src="https://lh4.ggpht.com/kJEnfqhPvtm4m3EneSZ4fWYGS8lW4YNhEjk6zPkyrQaBUHc-2Y_ElDic99NHI0h-UBLXVbRCjFybFvrWxdk=s100">
-            <a href="project-2048.html">Build Your Own 2048!</a>
-            <p>I made my own version of 2048. How cool is that!?</p>
-          </li>
-
-          <li>
-            <img src="https://lh6.ggpht.com/f_0W8h__3G99CWTjnMjD8BUKm7yp2-wJyApLtTwFoFtlal2ULf_JgHIsOQq2NiYfKOdMlXlMHDKNo5XVZLs=s100">
-            <a href="project-webperf.html">Website Performance Optimization</a>
-            <p>Hey... this class looks familiar.</p>
-          </li>
-
-          <li>
-            <img src="https://lh5.ggpht.com/IKdCmTWn8a2nMhlwMYzryvzRN5CUZAOBr4tDrEAbszV7TIFe9pRAInA4kkYcgTXwrifJsBEsq1agTueuu-g=s100">
-            <a href="project-mobile.html">Mobile Web Development</a>
-            <p>Making mobile apps isn't so hard after all.</p>
-          </li>
-
-          <li>
-            <img style="width: 100px;" src="views/images/pizzeria.jpg">
-            <a href="views/pizza.html">Cam's Pizzeria</a>
-            <p>Who wants a performant pizza?</p>
-          </li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100%, height=device-height, initial-scale=0.5"">
+    <title>Task</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css"> -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- .................................................. -->
+<!-- .................................................. -->
+<!-- Попап открывается после нажатия на кнопку TABLE FILTER в шапке -->
+<!-- .................................................. -->
+<!-- .................................................. -->
+    <nav id='side-panel'>
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+            Open Circles
+        </div>
+        <ul class="navigation" onclick="closeNav()">
+            <li class="active">
+                <a href="#"><div id="user-list"></div>user list</a>
+            </li>
+            <li>
+                <a href="#"><div id="daily"></div>daily</a>
+            </li>
+            <li>
+                <a href="#"><div id="brainstorm"></div>brainstorm</a>
+            </li>
+            <li>
+                <a href="#"><div id="course"></div>course</a>
+            </li>
+            <li>
+                <a href="#"><div id="leveling-system"></div>leveling system</a>
+            </li>
+            <li>
+                <a href="#"><div id="live-streams"></div>live streams</a>
+            </li>
+            <li>
+                <a href="#"><div id="advanced"></div>advanced</a>
+            </li>
+            <li>
+                <a href="#"><div id="video-analytics"></div>video analytics</a>
+            </li>
         </ul>
-    </div>
+            <!-- Причину, почему использовались ДИВы для отображения иконок в сайд-меню вместо каких-либо иных вариантов(list-style-image , <img>), проще объяснить вживую либо по скайпу.(bolvax1)-->
 
-    <footer>
-      <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
-    </footer>
-  </body>
-      
-    <link async href="css/print.css" rel="stylesheet">
-     
-    <script async src="js/perfmatters.js"></script>
+    </nav>
+    <main id='main'>
+        <header id='head-user-list'>
+            <a onclick="openNav()" id="sidebar-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="current-content"><p>Users List</p>874 users</div>
+            <form name="sort">
+                <input id="search" placeholder="Search" type="text">
+                <button id="tab-filter">Table Filter</button>
+                <select name="" id="list" size='1'>
+                    <option value="1">Dale McCormick</option>
+                    <option value="2">Dale McCormick2</option>
+                    <option value="3">Dale McCormick3</option>
+                    <option value="4">Dale McCormick4</option>
+                </select>
+            </form>
+        </header>
+    <section id='section-user-list'>
+        <table>
+            <tr>
+                <th>E-mail</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Company</th>
+                <th>Country</th>
+                <th>Subscription</th>    
+            </tr>
+            <tr>
+                <td><span class='main-cont'>leffler.karelle@marcellus.net</span></td>
+                <td><span class='main-cont'>Lewis </span> Taylor</td>
+                <td>Business</td>
+                <td>green</td>
+                <td>Korea</td>
+                <td><span class='main-cont'>11/02/2016</span></td>
+            </tr>
+            <tr>
+                <td><span class='main-cont'>karolann_walker@yahoo.com</span></td>
+                <td><span class='main-cont'>Katherine</span> Rogers</td>
+                <td>Business</td>
+                <td>olive</td>
+                <td>Rwanda</td>
+                <td><span class='main-cont'>11/02/2016</span></td>
+            </tr>
+            <tr>
+                <td><span class='main-cont'>lucile.mcdermott@yahoo.com</span></td>
+                <td><span class='main-cont'>Francisco</span> Webster</td>
+                <td>Private</td>
+                <td>aqua</td>
+                <td>Guam</td>
+                <td><span class='main-cont'>11/02/2016</span></td>
+            </tr>
+            <tr>
+                <td><span class='main-cont'>elfrieda_sanford@hagenes.co.uk</span></td>
+                <td><span class='main-cont'>Louisa</span> Griffith</td>
+                <td>Business</td>
+                <td>olive</td>
+                <td>Uruguay</td>
+                <td><span class='main-cont'>11/02/2016</span></td>
+            </tr>
+            <tr>
+                <td><span class='main-cont'>daphney.okuneva@gmail.com</span></td>
+                <td><span class='main-cont'>Alan </span>Ellis</td>
+                <td>Private</td>
+                <td>green</td>
+                <td>Djibouti</td>
+                <td><span class='main-cont'>11/02/2016</span></td>
+            </tr>
+            <tr>
+                <td><span class='main-cont'>ezequiel_rutherford@yahoo.com</span></td>
+                <td><span class='main-cont'>Edward </span>Jacobs</td>
+                <td>Business</td>
+                <td>black</td>
+                <td>Jersey</td>
+                <td><span class='main-cont'>11/02/2016</span></td>
+            </tr>
+            <tr>
+                <td><span class='main-cont'>leffler.karelle@marcellus.net</span></td>
+                <td><span class='main-cont'>Lewis </span>Taylor</td>
+                <td>Business</td>
+                <td>green</td>
+                <td>Korea</td>
+                <td><span class='main-cont'>11/02/2016</span></td>
+            </tr>
+            <tr>
+                <td><span class='main-cont'>karolann_walker@yahoo.com</span></td>
+                <td><span class='main-cont'>Katherine </span>Rogers</td>
+                <td>Rogers</td>
+                <td>olive</td>
+                <td>Rwanda</td>
+                <td><span class='main-cont'>11/02/2016</span></td>
+            </tr>
+            <tr>
+                <td><span class='main-cont'>lucile.mcdermott@yahoo.com</span></td>
+                <td><span class='main-cont'>Francisco </span>Webster</td>
+                <td>Private</td>
+                <td>aqua</td>
+                <td>Guam</td>
+                <td><span class='main-cont'>11/02/2016</span></td>
+            </tr>
+        </table>
+        <div class='show-more'>Show more</div>
+    </section>
+    </main>
+    <div id="popup">
+        <section>
+            <div class="popup-head">
+                <div class="current-user">
+                    <p>edit %name%</p>unique ID - 4343464546
+                </div>
+                <div id="cross">&times;</div>
+            </div>
+            <form class="popup-form" action="">
+                <div class="wide-input">
+                    <label class='.wide-input' for="e-mail">E-mail</label>
+                    <input name='e-mail' placeholder='leffler.carel@marcelus.net' type="text">
+                </div>
+
+                <div class="thin-input">
+                    <label for="">first name</label>
+                    <input name='first-name' placeholder='Lewis' type="text">
+                </div>
+
+                <div class="thin-input">
+                    <label for="">last name</label>
+                    <input name='last-name' placeholder='Taylor' type="text">
+                </div>
+
+                <div class="wide-input">
+                    <label for="">country</label>
+                    <input name='country' placeholder='Rwanda' type="text">
+                </div>
+
+                <div class="wide-input">
+                    <label for="">company</label>
+                    <input name='company' placeholder='Company name' type="text">
+                </div>
+
+                <div class="thin-input">
+                    <label for="">type</label>
+                    <select name="" size='1'>
+                        <option >Business</option>
+                        <option >Private</option>
+                        <option >Rogers</option>
+                    </select>
+                </div>
+
+                <div class="thin-input">
+                    <label for="">level</label>
+                    <select name="" size='1'>
+                        <option >1</option>
+                        <option >2</option>
+                        <option >3</option>
+                        <option >4</option>
+                        <option >5</option>
+                        <option >6</option>
+                        <option >7</option>
+                        <option >8</option>
+                        <option >9</option>
+                        <option >10</option>
+                        <option >11</option>
+                        <option selected>12</option>
+                    </select>
+                </div>
+
+                <div class="thin-input">
+                    <label for="">validated</label>
+                    <input value='Yes'  type="text">
+                </div>
+                <div class="thin-input">
+                    <label for="">coins</label>
+                    <input  value='3000' type="text">
+                </div>
+                <button type='button' id='save'>save</button>
+                <button type='button'  id='revoke-acc'>revoke access</button>
+                <button type='button'  id='reset-pass'>reset password</button>
+                <div class="sub">
+                    <p>Subscription type - <span>99.99</span></p>
+                    <p>Subscription date - <span>11/02/2016</span></p>
+                </div>
+            </form>
+        </section>
+    </div>
+<script src="js/script.js"></script>
+</body>
 </html>
