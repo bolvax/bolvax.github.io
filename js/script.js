@@ -1,3 +1,4 @@
+// Mobile menu
 $('.header__toggle').click(function() {
     if ($('.header__nav').hasClass('header__nav_mobile')) {
         $('.header__nav').removeClass('header__nav_mobile');
@@ -12,8 +13,8 @@ $('.header__nav a').click(function() {
         $('.header__nav').removeClass('header__nav_mobile');
     }
 });
-
-// PARALLAX/////////
+// Mobile menu
+// PARALLAX
 $(document).ready(function() {
     $(window).bind('scroll',function(e){
         parallaxScroll();
@@ -33,4 +34,13 @@ function parallaxScroll(){
         $('#parallax-3').css('background-position-y',(100+(current*.04))+'%');
     }
 }
-/////////////////////
+// PARALLAX
+
+
+///Smooth Scrolling
+$('a[href^="#"]').click(function(){
+    var target = $(this).attr('href');
+    $('html, body').animate({scrollTop: $(target).offset().top}, 500);
+    return false;
+});
+///Smooth Scrolling
