@@ -220,9 +220,10 @@ body{
     text-align: center;
     .header__nav{
       display: none;
+      box-shadow: 0 5px 5px #c5c5c5;
       a{
         &:last-child{
-          box-shadow: 0 5px 5px #c5c5c5;
+          padding-right: 20px;
         }
       }
     }
@@ -256,6 +257,17 @@ body{
   }
   .wayfarer-landing__button{
     margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .wayfarer-landing {
+    .footer{
+      h2{
+        font-size: 20px;
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
   }
 }
 @media only screen and (max-width: 480px) {
