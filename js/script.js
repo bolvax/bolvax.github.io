@@ -1,33 +1,36 @@
-var pageWidth = document.documentElement.clientWidth,
-	pageHeight = document.body.clientHeight,
-	screenHeight = document.documentElement.clientHeight,
-	nav = document.getElementById('side-panel'),
-    mainContent = document.getElementById('main'),
-    nav = document.getElementById('side-panel'),
-    toggleBar = document.getElementById('sidebar-toggle');;
+$('.header__toggle').click(function() {
+    if ($('.header__nav').hasClass('header__nav_mobile')) {
+        $('.header__nav').removeClass('header__nav_mobile');
+    } else {
+        $('.header__nav').addClass('header__nav_mobile');
+    }
+});
 
-	nav.style.height = pageHeight-100+'px';
-	popup.style.height = screenHeight+'px';
-function openNav(){
-    nav.style.width = '240px';
-    mainContent.style.width = (pageWidth-240)+'px';
-    mainContent.style.marginLeft = "240px";
-	toggleBar.onclick = closeNav;
+$('.header__nav a').click(function() {
+    if ($('.header__nav').hasClass('header__nav_mobile')) {
+        $('.navigation').removeClass('header__nav_mobile');
+        $('.header__nav').removeClass('header__nav_mobile');
+    }
+});
 
+// PARALLAX/////////
+$(document).ready(function() {
+    $(window).bind('scroll',function(e){
+        parallaxScroll();
+    });
+});
+function parallaxScroll(){
+    var current = $(window).scrollTop();
+    if( $(window).width() > 1200){
+        $('#parallax-1').css('background-position-y',(100+(current*.3))+'%');
+        $('#parallax-2').css('background-position-y',(100+(current*.2))+'%');
+        $('#parallax-3').css('background-position-y',(100+(current*.1))+'%');
+        $('#parallax-laptop').css('background-position-y',(0-current*2)+'%');
+        $('#parallax-phone').css('background-position-y',(0-current*0.7)+'%');
+    }else if($(window).width() > 1024){
+        $('#parallax-1').css('background-position-y',(100+(current*.1))+'%');
+        $('#parallax-2').css('background-position-y',(100+(current*.07))+'%');
+        $('#parallax-3').css('background-position-y',(100+(current*.04))+'%');
+    }
 }
-function closeNav(){
-    nav.style.width = '0px';
-    mainContent.style.width = pageWidth+'px';
-    mainContent.style.marginLeft = "0px";
-    toggleBar.onclick = openNav;
-}
-function closePpp(){
-    popup.style.display = 'none';
-};
-function openPpp(){
-    popup.style.display = 'block';
-};
-console.log('wdwd');
-document.getElementById("tab-filter").addEventListener("click", openPpp);
-cross.addEventListener("click", closePpp);
-save.addEventListener("click", closePpp);
+/////////////////////

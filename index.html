@@ -1,239 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=100%, height=device-height, initial-scale=0.5"">
-    <title>Task</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css"> -->
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-</head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Main</title>
+	<link rel="stylesheet" href="css/sass-styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
 <body>
-<!-- .................................................. -->
-<!-- .................................................. -->
-<!-- Попап открывается после нажатия на кнопку TABLE FILTER в шапке -->
-<!-- .................................................. -->
-<!-- .................................................. -->
-    <nav id='side-panel'>
-        <div class="logo">
-            <img src="img/logo.png" alt="">
-            Open Circles
-        </div>
-        <ul class="navigation" onclick="closeNav()">
-            <li class="active">
-                <a href="#"><div id="user-list"></div>user list</a>
-            </li>
-            <li>
-                <a href="#"><div id="daily"></div>daily</a>
-            </li>
-            <li>
-                <a href="#"><div id="brainstorm"></div>brainstorm</a>
-            </li>
-            <li>
-                <a href="#"><div id="course"></div>course</a>
-            </li>
-            <li>
-                <a href="#"><div id="leveling-system"></div>leveling system</a>
-            </li>
-            <li>
-                <a href="#"><div id="live-streams"></div>live streams</a>
-            </li>
-            <li>
-                <a href="#"><div id="advanced"></div>advanced</a>
-            </li>
-            <li>
-                <a href="#"><div id="video-analytics"></div>video analytics</a>
-            </li>
-        </ul>
-            <!-- Причину, почему использовались ДИВы для отображения иконок в сайд-меню вместо каких-либо иных вариантов(list-style-image , <img>), проще объяснить вживую либо по скайпу.(bolvax1)-->
+<main class="wayfarer-landing">
 
-    </nav>
-    <main id='main'>
-        <header id='head-user-list'>
-            <a onclick="openNav()" id="sidebar-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </a>
-            <div class="current-content"><p>Users List</p>874 users</div>
-            <form name="sort">
-                <input id="search" placeholder="Search" type="text">
-                <button type='button' id="tab-filter">Table Filter</button>
-                <select name="" id="list" size='1'>
-                    <option value="1">Dale McCormick</option>
-                    <option value="2">Dale McCormick2</option>
-                    <option value="3">Dale McCormick3</option>
-                    <option value="4">Dale McCormick4</option>
-                </select>
-            </form>
-        </header>
-    <section id='section-user-list'>
-        <table>
-            <tr>
-                <th>E-mail</th>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Company</th>
-                <th>Country</th>
-                <th>Subscription</th>    
-            </tr>
-            <tr>
-                <td><span class='main-cont'>leffler.karelle@marcellus.net</span></td>
-                <td><span class='main-cont'>Lewis </span> Taylor</td>
-                <td>Business</td>
-                <td>green</td>
-                <td>Korea</td>
-                <td><span class='main-cont'>11/02/2016</span></td>
-            </tr>
-            <tr>
-                <td><span class='main-cont'>karolann_walker@yahoo.com</span></td>
-                <td><span class='main-cont'>Katherine</span> Rogers</td>
-                <td>Business</td>
-                <td>olive</td>
-                <td>Rwanda</td>
-                <td><span class='main-cont'>11/02/2016</span></td>
-            </tr>
-            <tr>
-                <td><span class='main-cont'>lucile.mcdermott@yahoo.com</span></td>
-                <td><span class='main-cont'>Francisco</span> Webster</td>
-                <td>Private</td>
-                <td>aqua</td>
-                <td>Guam</td>
-                <td><span class='main-cont'>11/02/2016</span></td>
-            </tr>
-            <tr>
-                <td><span class='main-cont'>elfrieda_sanford@hagenes.co.uk</span></td>
-                <td><span class='main-cont'>Louisa</span> Griffith</td>
-                <td>Business</td>
-                <td>olive</td>
-                <td>Uruguay</td>
-                <td><span class='main-cont'>11/02/2016</span></td>
-            </tr>
-            <tr>
-                <td><span class='main-cont'>daphney.okuneva@gmail.com</span></td>
-                <td><span class='main-cont'>Alan </span>Ellis</td>
-                <td>Private</td>
-                <td>green</td>
-                <td>Djibouti</td>
-                <td><span class='main-cont'>11/02/2016</span></td>
-            </tr>
-            <tr>
-                <td><span class='main-cont'>ezequiel_rutherford@yahoo.com</span></td>
-                <td><span class='main-cont'>Edward </span>Jacobs</td>
-                <td>Business</td>
-                <td>black</td>
-                <td>Jersey</td>
-                <td><span class='main-cont'>11/02/2016</span></td>
-            </tr>
-            <tr>
-                <td><span class='main-cont'>leffler.karelle@marcellus.net</span></td>
-                <td><span class='main-cont'>Lewis </span>Taylor</td>
-                <td>Business</td>
-                <td>green</td>
-                <td>Korea</td>
-                <td><span class='main-cont'>11/02/2016</span></td>
-            </tr>
-            <tr>
-                <td><span class='main-cont'>karolann_walker@yahoo.com</span></td>
-                <td><span class='main-cont'>Katherine </span>Rogers</td>
-                <td>Rogers</td>
-                <td>olive</td>
-                <td>Rwanda</td>
-                <td><span class='main-cont'>11/02/2016</span></td>
-            </tr>
-            <tr>
-                <td><span class='main-cont'>lucile.mcdermott@yahoo.com</span></td>
-                <td><span class='main-cont'>Francisco </span>Webster</td>
-                <td>Private</td>
-                <td>aqua</td>
-                <td>Guam</td>
-                <td><span class='main-cont'>11/02/2016</span></td>
-            </tr>
-        </table>
-        <div class='show-more'>Show more</div>
-    </section>
-    </main>
-    <div id="popup">
-        <section>
-            <div class="popup-head">
-                <div class="current-user">
-                    <p>edit %name%</p>unique ID - 4343464546
-                </div>
-                <div id="cross">&times;</div>
-            </div>
-            <form class="popup-form" action="">
-                <div class="wide-input">
-                    <label class='.wide-input' for="e-mail">E-mail</label>
-                    <input name='e-mail' placeholder='leffler.carel@marcelus.net' type="text">
-                </div>
 
-                <div class="thin-input">
-                    <label for="">first name</label>
-                    <input name='first-name' placeholder='Lewis' type="text">
-                </div>
+	<!---->
+	<!--HEADER-->
+	<!---->
+	<header class="header">
+		<div class="container">
+			<a  class="header__logo" href="index.html"></a>
+			<div class="header__toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<nav class="header__nav">
+				<a href="" >use case solutions</a>
+				<a href="product.html" >product</a>
+				<a href="price.html" >pricing</a>
+				<a href="" >blog</a>
+				<a href="" >contact us</a>
+			</nav>
+		</div>
+	</header>
+	<!---->
+	<!--HEADER-->
+	<!---->
+	
+	<!---->
+	<!--CONTENT-->
+	<!---->
+	<section class="main-section">
+		<a href="" name="main-section"></a>
+		<div class="main-section__bg px-1" id="parallax-1"></div>
+		<div class="main-section__bg px-2" id="parallax-2"></div>
+		<div class="main-section__bg px-3" id="parallax-3"></div>
+		<div class="main-section__bg px-4" id="parallax-4"></div>
+		<div class="main-section__bg-container">
+			<div class="main-section__title">
+				Highly customizable service management solution. <br>
+				Turn your business into a flawless mechanism.
+			</div>
+			<a href="#" class="wayfarer-landing__button">Request a Demo</a>
+			<div class="main-section__laptop" id="parallax-laptop">
+				<div class="main-section__phone" id="parallax-phone"></div>
+			</div>
+		</div>
 
-                <div class="thin-input">
-                    <label for="">last name</label>
-                    <input name='last-name' placeholder='Taylor' type="text">
-                </div>
+	</section>
 
-                <div class="wide-input">
-                    <label for="">country</label>
-                    <input name='country' placeholder='Rwanda' type="text">
-                </div>
 
-                <div class="wide-input">
-                    <label for="">company</label>
-                    <input name='company' placeholder='Company name' type="text">
-                </div>
+	<section class="web-section">
+		<div class="container grid">
+			<div class="1/2--desk grid__cell">
+				<h2>WEB Interface</h2>
+				<h3>Control your workflow with any device, anywhere</h3>
+				<ul>
+					<li>Full workflow control to ensure that not
+						a single order is missed</li>
+					<li>Intuitive task/assignment tracking. you
+						always know what’s going on</li>
+					<li>Get reports ASAP. You do know when job is done</li>
+				</ul>
+				<a href="#" class="wayfarer-landing__button ">Learn more about web interface</a>
+			</div>
+			<div class="1/2--desk grid__cell">
+				<div class="image-content"></div>
+			</div>
+		</div>
+	</section>
 
-                <div class="thin-input">
-                    <label for="">type</label>
-                    <select name="" size='1'>
-                        <option >Business</option>
-                        <option >Private</option>
-                        <option >Rogers</option>
-                    </select>
-                </div>
+	<div class="comma"></div>
 
-                <div class="thin-input">
-                    <label for="">level</label>
-                    <select name="" size='1'>
-                        <option >1</option>
-                        <option >2</option>
-                        <option >3</option>
-                        <option >4</option>
-                        <option >5</option>
-                        <option >6</option>
-                        <option >7</option>
-                        <option >8</option>
-                        <option >9</option>
-                        <option >10</option>
-                        <option >11</option>
-                        <option selected>12</option>
-                    </select>
-                </div>
+	<section class="mobile-section">
+		<div class="container grid grid--rev">
+			<div class="5/12--desk grid__cell">
+				<h2>Mobile Client</h2>
+				<h3>Grant your workers with a powerful tool to boost their performance</h3>
+				<ul>
+					<li>Easy-to-use manager-worker communication. leave all miscommunications overboard</li>
+					<li>Use schedule feature to improve your workers performance</li>
+					<li> Always on time - set deadline for each task</li>
+				</ul>
+				<a href="#" class="wayfarer-landing__button">Learn more about mobile client</a>
+			</div>
+			<div class="7/12--desk grid__cell">
+				<div class="image-content"></div>
+			</div>
+		</div>
+	</section>
 
-                <div class="thin-input">
-                    <label for="">validated</label>
-                    <input value='Yes'  type="text">
-                </div>
-                <div class="thin-input">
-                    <label for="">coins</label>
-                    <input  value='3000' type="text">
-                </div>
-                <button type='button' id='save'>save</button>
-                <button type='button'  id='revoke-acc'>revoke access</button>
-                <button type='button'  id='reset-pass'>reset password</button>
-                <div class="sub">
-                    <p>Subscription type - <span>99.99</span></p>
-                    <p>Subscription date - <span>11/02/2016</span></p>
-                </div>
-            </form>
-        </section>
-    </div>
+	<div class="comma"></div>
+
+	<section class="customer-section">
+		<div class="container grid">
+			<div class="1/2--desk grid__cell">
+				<h2>Customer App</h2>
+				<h3>Let your clients be few clicks away from you</h3>
+				<ul>
+					<li>Get instant updates on what your clients need
+					</li>
+					<li>Fexible account system. Keep track of your precious customers</li>
+					<li>Full integration with CRM/mobile modules</li>
+				</ul>
+				<a href="#" class="wayfarer-landing__button">Learn more about customer app</a>
+			</div>
+			<div class="1/2--desk grid__cell">
+				<div class="image-content"></div>
+			</div>
+		</div>
+	</section>
+
+
+	<!---->
+	<!--CONTENT-->
+	<!---->
+
+	<!---->
+	<!--FOOTER-->
+	<!---->
+	<footer class="footer">
+		<h2>Learn more about price, customization or anything else. <br>
+			Our team member will contact you within 24 hours
+		</h2>
+		<div class="container">
+			<form action="" class="form grid">
+				<div class="1/3--desk grid__cell"><input type="text" placeholder="Name" class="form__input"></div>
+				<div class="1/3--desk grid__cell"><input type="text" placeholder="E-mail" class="form__input"></div>
+				<div class="1/3--desk grid__cell"><a class="wayfarer-landing__button">Contacts US</a></div>
+			</form>
+		</div>
+		<div class="footer__copyright">Copyright © 2017 Wayfarer </div>
+	</footer>
+	<!---->
+	<!--FOOTER-->
+	<!---->
+</main>
+<script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

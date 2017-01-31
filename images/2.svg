@@ -1,0 +1,25 @@
+<svg version="1.1" id="OBJECTS" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="20 250 800 285" style="enable-background:new 0 0 800 800;" fill-opacity=".2" xml:space="preserve">
+<style type="text/css">
+	.wayfarer-landing svg{
+		width: 100%;
+		background-color: #E7F3FF;
+		padding-top: 250px;
+	}
+	.st0{fill:#C7CEEF;}
+	.st1{fill:#AFB9EF;}
+	.st2{fill:#9BA9EF;}
+	.st3{fill:#8697EF;}
+</style>
+
+<g id="_x30_3">
+	<g>
+		<rect x="322.3" y="492" class="st1" width="0.3" height="0.5"/>
+		<path class="st1" d="M729.7,511v-22H719v-49.3h-14.7V469H689v-10h-14.7v-34.7h-28.7v-14.7h-42v12.7h-19.3V405h-18v-40.7H559
+			L534.3,381v16.7H519v16.7h-16v-48.7h-8v-8h-6v7.3h-8v74.7h-22.7v-32H433V425h-32.7v-30.7h-6.7v-6.7h-18v6h-5.3v28.7h-8.5v-23.1
+			c0-2.6,0-5.3,0-8.2v-1.6h0c-0.4-30.1-4.3-69.7-22.1-67.8c-14.4,1.6-17.3,39.3-17.5,67.8h0V421h-10.5v-34.7h-42v34h-25.3v16h-8V367
+			H229v-18.7h-2.7V367h-8.7v70h-23.3v-16.7h-18v-8h-24v8.7H127v43.3h-14.7v66H51v7.3l700.7,1.3v-28H729.7z"/>
+	</g>
+</g>
+
+</svg>
