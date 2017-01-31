@@ -40,7 +40,7 @@ function parallaxScroll(){
 ///Smooth Scrolling
 $('a[href^="#"]').click(function(){
     var target = $(this).attr('href');
-    $('html, body').animate({scrollTop: $(target).offset().top}, 500);
+    $('html, body').animate({scrollTop: ($(target).offset().top+$(window).scrollTop()) }, 500);
     return false;
 });
 ///Smooth Scrolling
